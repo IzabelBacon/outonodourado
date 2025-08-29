@@ -1,1 +1,30 @@
+.natural-bg {
+    background-color: #f0f7f0;
+}
+
+.leaf-green {
+    background-color: #2e7d32;
+}
+
+.hero-height {
+    min-height: 70vh;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.leaf-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="%232e7d32" fill-opacity="0.03" d="M30,20 Q50,10 70,20 T90,40 Q100,60 80,70 T60,90 Q40,100 30,80 T10,60 Q0,40 20,30 T30,20 Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.5;
+    z-index: -1;
+}
 

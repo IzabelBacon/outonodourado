@@ -1,599 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoVerde - Produtos Sustentáveis</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-.natural-bg {
-background-color: #f0f7f0;
-}
-.leaf-green {
-background-color: #2e7d32;
-}
-.hero-height {
-min-height: 70vh;
-}
-.product-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.leaf-pattern::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="%232e7d32" fill-opacity="0.03" d="M30,20 Q50,10 70,20 T90,40 Q100,60 80,70 T60,90 Q40,100 30,80 T10,60 Q0,40 20,30 T30,20 Z"/></svg>');
-background-size: 200px;
-opacity: 0.5;
-z-index: -1;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVerde - Produtos Sustentáveis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="natural-bg font-sans">
-<!-- Menu Fixo -->
-<nav class="leaf-green text-white shadow-lg sticky top-0 z-50">
-<div class="container mx-auto px-4 py-3 flex justify-between items-center">
-<div class="flex items-center space-x-2">
-<img src="https://placehold.co/40x40/2e7d32/ffffff?text=EV" alt="Logo EcoVerde - Folha verde estilizada" class="rounded-full">
-<span class="text-xl font-bold">EcoVerde</span>
-</div>
-<div class="hidden md:flex space-x-6">
-<a href="#home" class="hover:text-green-200 transition">Home</a>
-<a href="#sobre" class="hover:text-green-200 transition">Sobre Nós</a>
-<a href="#produtos" class="hover:text-green-200 transition">Produtos</a>
-<a href="#loja" class="hover:text-green-200 transition">Loja Física</a>
-<a href="#contato" class="hover:text-green-200 transition">Contato</a>
-</div>
-<div class="flex items-center space-x-4">
-<a href="#carrinho" class="relative">
-<i class="fas fa-shopping-cart text-xl"></i>
-<span class="absolute -top-2 -right-2 bg-yellow-400 text-xs text-black rounded-full h-5 w-5 flex items-center justify-center">0</span>
-</a>
-<button class="md:hidden focus:outline-none">
-<i class="fas fa-bars text-xl"></i>
-</button>
-</div>
-</div>
-</nav>
+    <!-- Menu Fixo -->
+    <nav class="leaf-green text-white shadow-lg sticky top-0 z-50">
+        <!-- Menu code here -->
+    </nav>
 
-<!-- Banner Principal -->
-<section id="home" class="relative hero-height flex items-center leaf-pattern">
-<div class="absolute inset-0 bg-black opacity-40"></div>
-<img src="https://placehold.co/1920x1080/2e7d32/ffffff?text=Fachada+EcoVerde" alt="Fachada principal da loja EcoVerde com parede verde, vitrine com produtos sustentáveis e entrada acolhedora" class="absolute inset-0 w-full h-full object-cover">
-<div class="container mx-auto px-4 z-10 text-white">
-<div class="max-w-2xl">
-<h1 class="text-4xl md:text-5xl font-bold mb-4">Viver Sustentável Começa Aqui</h1>
-<p class="text-xl mb-8">Produtos ecológicos e naturais para transformar seu estilo de vida com consciência ambiental.</p>
-<div class="flex flex-wrap gap-4">
-<a href="#produtos" class="px-8 py-3 bg-white text-green-800 font-semibold rounded-lg hover:bg-green-100 transition">Ver Produtos</a>
-<a href="#sobre" class="px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-800 transition">Conheça Nossa História</a>
-</div>
-</div>
-</div>
-</section>
+    <!-- Banner Principal -->
+    <section id="home" class="relative hero-height flex items-center leaf-pattern">
+        <!-- Banner content here -->
+    </section>
 
-<!-- Categorias Rápidas -->
-<section class="py-12 bg-white">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-12 text-green-800">Nossas Categorias</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<a href="#" class="category-card p-6 rounded-lg shadow-md text-center hover:bg-green-50 transition">
-<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
-<i class="fas fa-leaf text-3xl text-green-700"></i>
-</div>
-<h3 class="font-semibold text-green-800">Hortaliças Orgânicas</h3>
-<p class="text-sm text-gray-600 mt-2">Frescas e sem agrotóxicos</p>
-</a>
-<a href="#" class="category-card p-6 rounded-lg shadow-md text-center hover:bg-green-50 transition">
-<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
-<i class="fas fa-recycle text-3xl text-green-700"></i>
-</div>
-<h3 class="font-semibold text-green-800">Produtos Recicláveis</h3>
-<p class="text-sm text-gray-600 mt-2">Itens eco-friendly</p>
-</a>
-<a href="#" class="category-card p-6 rounded-lg shadow-md text-center hover:bg-green-50 transition">
-<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
-<i class="fas fa-spa text-3xl text-green-700"></i>
-</div>
-<h3 class="font-semibold text-green-800">Cosméticos Naturais</h3>
-<p class="text-sm text-gray-600 mt-2">Beleza sustentável</p>
-</a>
-<a href="#" class="category-card p-6 rounded-lg shadow-md text-center hover:bg-green-50 transition">
-<div class="bg-green-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
-<i class="fas fa-bottle-water text-3xl text-green-700"></i>
-</div>
-<h3 class="font-semibold text-green-800">Bambu e Vidro</h3>
-<p class="text-sm text-gray-600 mt-2">Alternativas sustentáveis</p>
-</a>
-</div>
-</div>
-</section>
+    <!-- Categorias Rápidas -->
+    <section class="py-12 bg-white">
+        <!-- Categories content here -->
+    </section>
 
-<!-- Sobre Nós -->
-<section id="sobre" class="py-16 bg-green-50">
-<div class="container mx-auto px-4">
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="md:w-1/2">
-<img src="https://placehold.co/600x400/2e7d32/ffffff?text=Equipe+EcoVerde" alt="Equipe da EcoVerde sorrindo no interior da loja, com prateleiras de produtos sustentáveis ao fundo" class="rounded-lg shadow-xl w-full">
-</div>
-<div class="md:w-1/2">
-<h2 class="text-3xl font-bold text-green-800 mb-6">Nossa História</h2>
-<p class="text-lg mb-6">Fundada em 2010 em Aruacria, Paraná, a EcoVerde nasceu da paixão por um mundo mais sustentável. Começamos como uma pequena feira de produtos orgânicos e hoje somos referência em sustentabilidade na região.</p>
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 bg-green-50">
+        <!-- About content here -->
+    </section>
 
-<div class="mb-8">
-<h3 class="text-xl font-semibold text-green-700 mb-3">Missão</h3>
-<p class="mb-4">Promover o consumo consciente através de produtos que respeitam o meio ambiente e melhoram a qualidade de vida.</p>
+    <!-- Produtos -->
+    <section id="produtos" class="py-16 bg-white">
+        <!-- Products content here -->
+    </section>
 
-<h3 class="text-xl font-semibold text-green-700 mb-3">Valores</h3>
-<ul class="grid grid-cols-2 gap-2">
-<li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Sustentabilidade</li>
-<li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Transparência</li>
-<li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Qualidade</li>
-<li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i> Comunidade</li>
-</ul>
-</div>
+    <!-- Loja Física -->
+    <section id="loja" class="py-16 bg-green-50">
+        <!-- Store content here -->
+    </section>
 
-<div class="bg-white p-4 rounded-lg shadow-inner">
-<h4 class="font-semibold text-green-700 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Localização</h4>
-<p>Rua das Flores, 123 - Centro, Aruacria/PR</p>
-<p class="text-sm text-gray-600">Aberto de Segunda a Sábado, das 9h às 18h</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <!-- Depoimentos -->
+    <section class="py-16 bg-white">
+        <!-- Testimonials content here -->
+    </section>
 
-<!-- Produtos -->
-<section id="produtos" class="py-16 bg-white">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-4 text-green-800">Nossos Produtos</h2>
-<p class="text-center max-w-2xl mx-auto mb-12 text-gray-600">Produtos cuidadosamente selecionados para uma vida mais sustentável e saudável</p>
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-green-800 text-white">
+        <!-- Contact form content here -->
+    </section>
 
-<!-- Filtros -->
-<div class="flex flex-wrap justify-center gap-4 mb-12">
-<button class="px-4 py-2 bg-green-700 text-white rounded-full hover:bg-green-800 transition">Todos</button>
-<button class="px-4 py-2 border border-green-700 text-green-700 rounded-full hover:bg-green-50 transition">Orgânicos</button>
-<button class="px-4 py-2 border border-green-700 text-green-700 rounded-full hover:bg-green-50 transition">Recicláveis</button>
-<button class="px-4 py-2 border border-green-700 text-green-700 rounded-full hover:bg-green-50 transition">Cosméticos</button>
-<button class="px-4 py-2 border border-green-700 text-green-700 rounded-full hover:bg-green-50 transition">Bambu/Vidro</button>
-</div>
+    <!-- Newsletter -->
+    <section class="py-12 bg-green-700 text-white">
+        <!-- Newsletter content here -->
+    </section>
 
-<!-- Grade de Produtos -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-<!-- Produto 1 -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-<div class="relative">
-<img src="https://placehold.co/400x300/2e7d32/ffffff?text=Kit+Hortaliças" alt="Kit de hortaliças orgânicas variadas em uma cesta de bambu" class="w-full h-48 object-cover">
-<div class="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
-</div>
-<div class="p-4">
-<h3 class="font-bold text-lg mb-2 text-green-800">Kit Hortaliças Orgânicas</h3>
-<p class="text-gray-600 text-sm mb-4">Seleção sazonal de 6 variedades de hortaliças cultivadas sem agrotóxicos</p>
-<div class="flex justify-between items-center">
-<span class="font-bold text-green-700">R$ 42,90</span>
-<button class="bg-green-700 text-white px-3 py-1 rounded hover:bg-green-800 transition flex items-center">
-<i class="fas fa-cart-plus mr-1"></i> Add
-</button>
-</div>
-</div>
-</div>
+    <!-- Rodapé -->
+    <footer class="bg-green-900 text-white py-8">
+        <!-- Footer content here -->
+    </footer>
 
-<!-- Produto 2 -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-<div class="relative">
-<img src="https://placehold.co/400x300/2e7d32/ffffff?text=Shampoo+Sólido" alt="Shampoo sólido natural em formato redondo com folhas decorativas ao lado" class="w-full h-48 object-cover">
-<div class="absolute top-2 right-2 bg-red-400 text-xs text-white font-bold px-2 py-1 rounded-full">-10%</div>
-</div>
-<div class="p-4">
-<h3 class="font-bold text-lg mb-2 text-green-800">Shampoo Sólido Natural</h3>
-<p class="text-gray-600 text-sm mb-4">Formulação vegana com óleo de coco e alecrim, sem embalagem plástica</p>
-<div class="flex justify-between items-center">
-<div>
-<span class="text-sm line-through text-gray-500 mr-2">R$ 32,90</span>
-<span class="font-bold text-green-700">R$ 29,90</span>
-</div>
-<button class="bg-green-700 text-white px-3 py-1 rounded hover:bg-green-800 transition flex items-center">
-<i class="fas fa-cart-plus mr-1"></i> Add
-</button>
-</div>
-</div>
-</div>
-
-<!-- Produto 3 -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-<img src="https://placehold.co/400x300/2e7d32/ffffff?text=Canudo+Bambu" alt="Conjunto de canudos de bambu em diferentes tamanhos com escova de limpeza" class="w-full h-48 object-cover">
-<div class="p-4">
-<h3 class="font-bold text-lg mb-2 text-green-800">Kit Canudos de Bambu</h3>
-<p class="text-gray-600 text-sm mb-4">4 canudos reutilizáveis + escova de limpeza em embalagem de algodão cru</p>
-<div class="flex justify-between items-center">
-<span class="font-bold text-green-700">R$ 27,50</span>
-<button class="bg-green-700 text-white px-3 py-1 rounded hover:bg-green-800 transition flex items-center">
-<i class="fas fa-cart-plus mr-1"></i> Add
-</button>
-</div>
-</div>
-</div>
-
-<!-- Produto 4 -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-<img src="https://placehold.co/400x300/2e7d32/ffffff?text=Compoteira+Vidro" alt="Compoteira de vidro com tampa de bambu contendo grãos e especiarias" class="w-full h-48 object-cover">
-<div class="p-4">
-<h3 class="font-bold text-lg mb-2 text-green-800">Compoteira de Vidro</h3>
-<p class="text-gray-600 text-sm mb-4">Kit com 3 potes de vidro hermético com tampa de bambu, vários tamanhos</p>
-<div class="flex justify-between items-center">
-<span class="font-bold text-green-700">R$ 89,90</span>
-<button class="bg-green-700 text-white px-3 py-1 rounded hover:bg-green-800 transition flex items-center">
-<i class="fas fa-cart-plus mr-1"></i> Add
-</button>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Botão Ver Mais -->
-<div class="text-center mt-12">
-<button class="px-8 py-3 border-2 border-green-700 text-green-700 font-semibold rounded-lg hover:bg-green-700 hover:text-white transition">Ver Todos os Produtos</button>
-</div>
-</div>
-</section>
-
-<!-- Loja Física -->
-<section id="loja" class="py-16 bg-green-50">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-12 text-green-800">Nossa Loja Física</h2>
-
-<div class="flex flex-col lg:flex-row gap-12">
-<!-- Mapa -->
-<div class="lg:w-1/2">
-<div class="rounded-lg overflow-hidden shadow-xl">
-<img src="https://placehold.co/800x400/2e7d32/ffffff?text=Mapa+Localização" alt="Mapa mostrando a localização da loja EcoVerde em Aruacria, Paraná, com marcador verde" class="w-full h-full object-cover">
-</div>
-</div>
-
-<!-- Info Loja -->
-<div class="lg:w-1/2">
-<div class="bg-white p-8 rounded-lg shadow-lg">
-<h3 class="text-2xl font-bold text-green-800 mb-4">Venha nos visitar!</h3>
-<p class="mb-6">Nosso espaço foi cuidadosamente projetado para oferecer uma experiência de compra agradável, onde você pode conhecer, tocar e experimentar nossos produtos.</p>
-
-<div class="space-y-4 mb-6">
-<div class="flex items-start">
-<i class="fas fa-map-marker-alt text-green-700 text-xl mt-1 mr-3"></i>
-<div>
-<h4 class="font-semibold text-green-800">Endereço</h4>
-<p>Rua das Flores, 123 - Centro, Araucária - PR</p>
-</div>
-</div>
-<div class="flex items-start">
-<i class="fas fa-clock text-green-700 text-xl mt-1 mr-3"></i>
-<div>
-<h4 class="font-semibold text-green-800">Horário de Funcionamento</h4>
-<p>Segunda a Sexta: 9h às 18h</p>
-<p>Sábado: 9h às 14h</p>
-<p>Domingo: Fechado</p>
-</div>
-</div>
-<div class="flex items-start">
-<i class="fas fa-phone-alt text-green-700 text-xl mt-1 mr-3"></i>
-<div>
-<h4 class="font-semibold text-green-800">Telefone</h4>
-<p>(41) 1234-5678</p>
-</div>
-</div>
-</div>
-
-<h4 class="font-semibold text-green-800 mb-3">Galeria da Loja</h4>
-<div class="grid grid-cols-3 gap-2">
-<img src="https://placehold.co/200x150/2e7d32/ffffff?text=Interior+1" alt="Interior da loja EcoVerde com prateleiras de madeira repletas de produtos sustentáveis" class="rounded cursor-pointer hover:opacity-80 transition">
-<img src="https://placehold.co/200x150/2e7d32/ffffff?text=Interior+2" alt="Balcão de atendimento da EcoVerde com funcionários sorridentes e decoração natural" class="rounded cursor-pointer hover:opacity-80 transition">
-<img src="https://placehold.co/200x150/2e7d32/ffffff?text=Exterior" alt="Fachada externa da loja EcoVerde com jardim vertical e letreiro artesanal" class="rounded cursor-pointer hover:opacity-80 transition">
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Depoimentos -->
-<section class="py-16 bg-white">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold text-center mb-12 text-green-800">O que dizem nossos clientes</h2>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Depoimento 1 -->
-<div class="bg-green-50 p-6 rounded-lg shadow-md">
-<div class="flex items-center mb-4">
-<img src="https://placehold.co/60x60/2e7d32/ffffff?text=AM" alt="Foto de perfil de Ana Maria, cliente satisfeita" class="rounded-full mr-4">
-<div>
-<h4 class="font-semibold text-green-800">Ana Maria</h4>
-<div class="flex text-yellow-400">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-</div>
-</div>
-<p class="text-gray-600 italic">"Adoro os produtos da EcoVerde! O shampoo sólido mudou minha rotina de cuidados e reduzi muito meu lixo no banheiro. A equipe é super atenciosa e conhece cada detalhe dos produtos."</p>
-</div>
-
-<!-- Depoimento 2 -->
-<div class="bg-green-50 p-6 rounded-lg shadow-md">
-<div class="flex items-center mb-4">
-<img src="https://placehold.co/60x60/2e7d32/ffffff?text=CS" alt="Foto de perfil de Carlos Silva, cliente fiel" class="rounded-full mr-4">
-<div>
-<h4 class="font-semibold text-green-800">Carlos Silva</h4>
-<div class="flex text-yellow-400">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star-half-alt"></i>
-</div>
-</div>
-</div>
-<p class="text-gray-600 italic">"Compro as hortaliças toda semana e a diferença de sabor é enorme. Meus filhos que não gostavam de salada agora adoram! O atendimento é excelente e sempre têm dicas de preparo."</p>
-</div>
-
-<!-- Depoimento 3 -->
-<div class="bg-green-50 p-6 rounded-lg shadow-md">
-<div class="flex items-center mb-4">
-<img src="https://placehold.co/60x60/2e7d32/ffffff?text=JP" alt="Foto de perfil de João Pedro, cliente há 3 anos" class="rounded-full mr-4">
-<div>
-<h4 class="font-semibold text-green-800">João Pedro</h4>
-<div class="flex text-yellow-400">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-</div>
-</div>
-<p class="text-gray-600 italic">"Transformei minha casa com os produtos de limpeza ecológicos da EcoVerde. São eficientes, cheirosos e sem químicos agressivos. A redução no meu lixo doméstico foi de quase 60%!"</p>
-</div>
-</div>
-
-<!-- Botão Ver Mais Depoimentos -->
-<div class="text-center mt-12">
-<button class="px-6 py-2 border border-green-700 text-green-700 rounded-full hover:bg-green-700 hover:text-white transition">Ver Mais Depoimentos</button>
-</div>
-</div>
-</section>
-
-<!-- Contato -->
-<section id="contato" class="py-16 bg-green-800 text-white">
-<div class="container mx-auto px-4">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold mb-4">Fale Conosco</h2>
-<p class="max-w-2xl mx-auto">Tem dúvidas, sugestões ou quer saber mais sobre nossos produtos? Entre em contato!</p>
-</div>
-
-<div class="flex flex-col lg:flex-row gap-12">
-<!-- Formulário -->
-<div class="lg:w-1/2">
-<form class="space-y-4">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div>
-<label for="nome" class="block mb-1">Nome</label>
-<input type="text" id="nome" class="w-full px-4 py-2 rounded bg-green-900 border border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
-</div>
-<div>
-<label for="email" class="block mb-1">E-mail</label>
-<input type="email" id="email" class="w-full px-4 py-2 rounded bg-green-900 border border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
-</div>
-</div>
-<div>
-<label for="assunto" class="block mb-1">Assunto</label>
-<select id="assunto" class="w-full px-4 py-2 rounded bg-green-900 border border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
-<option>Selecione...</option>
-<option>Dúvida sobre produtos</option>
-<option>Suporte pós-venda</option>
-<option>Sugestão</option>
-<option>Parcerias</option>
-<option>Outro</option>
-</select>
-</div>
-<div>
-<label for="mensagem" class="block mb-1">Mensagem</label>
-<textarea id="mensagem" rows="5" class="w-full px-4 py-2 rounded bg-green-900 border border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-</div>
-<button type="submit" class="px-8 py-3 bg-white text-green-800 font-semibold rounded-lg hover:bg-green-100 transition w-full md:w-auto">Enviar Mensagem</button>
-</form>
-</div>
-
-<!-- Outros Contatos -->
-<div class="lg:w-1/2">
-<div class="bg-green-900 p-8 rounded-lg h-full">
-<h3 class="text-xl font-bold mb-6">Outras Formas de Contato</h3>
-
-<div class="space-y-6">
-<div class="flex items-start">
-<div class="bg-green-700 p-3 rounded-full mr-4">
-<i class="fas fa-phone-alt text-lg"></i>
-</div>
-<div>
-<h4 class="font-semibold mb-1">Telefone</h4>
-<p>(41) 1234-5678</p>
-<p class="text-sm text-green-300">Segunda a Sexta, 9h às 18h</p>
-</div>
-</div>
-
-<div class="flex items-start">
-<div class="bg-green-700 p-3 rounded-full mr-4">
-<i class="fas fa-envelope text-lg"></i>
-</div>
-<div>
-<h4 class="font-semibold mb-1">E-mail</h4>
-<p>contato@ecoverde.com.br</p>
-<p class="text-sm text-green-300">Respondemos em até 24h</p>
-</div>
-</div>
-
-<div class="flex items-start">
-<div class="bg-green-700 p-3 rounded-full mr-4">
-<i class="fas fa-map-marker-alt text-lg"></i>
-</div>
-<div>
-<h4 class="font-semibold mb-1">Endereço</h4>
-<p>Rua das Flores, 123 - Centro</p>
-<p>Araucária - PR</p>
-<p class="text-sm text-green-300">Estacionamento gratuito</p>
-</div>
-</div>
-
-<div>
-<h4 class="font-semibold mb-3">Redes Sociais</h4>
-<div class="flex space-x-4">
-<a href="#" class="bg-green-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
-<i class="fab fa-facebook-f"></i>
-</a>
-<a href="#" class="bg-green-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="#" class="bg-green-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
-<i class="fab fa-whatsapp"></i>
-</a>
-<a href="#" class="bg-green-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-600 transition">
-<i class="fab fa-youtube"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Newsletter -->
-<section class="py-12 bg-green-700 text-white">
-<div class="container mx-auto px-4 text-center">
-<h2 class="text-2xl font-bold mb-4">Receba Nossas Novidades</h2>
-<p class="max-w-2xl mx-auto mb-8">Cadastre-se para receber ofertas exclusivas, dicas de sustentabilidade e novidades sobre nossos produtos.</p>
-
-<div class="max-w-md mx-auto flex">
-<input type="email" placeholder="Seu melhor e-mail" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-gray-800">
-<button class="bg-green-900 px-6 py-3 rounded-r font-semibold hover:bg-green-800 transition">Cadastrar</button>
-</div>
-
-<div class="flex items-center justify-center mt-6 space-x-4">
-<div class="flex items-center">
-<i class="fas fa-truck mr-2"></i>
-<span class="text-sm">Frete grátis para todo Paraná</span>
-</div>
-<div class="flex items-center">
-<i class="fas fa-lock mr-2"></i>
-<span class="text-sm">Pagamento 100% seguro</span>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Rodapé -->
-<footer class="bg-green-900 text-white py-8">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div>
-<h3 class="font-bold text-lg mb-4">EcoVerde</h3>
-<p class="text-sm text-green-300">Produtos sustentáveis para transformar seu estilo de vida com consciência ambiental.</p>
-</div>
-
-<div>
-<h3 class="font-bold text-lg mb-4">Links Rápidos</h3>
-<ul class="space-y-2">
-<li><a href="#" class="text-green-300 hover:text-white transition">Home</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Produtos</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Sobre Nós</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Loja Física</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Contato</a></li>
-</ul>
-</div>
-
-<div>
-<h3 class="font-bold text-lg mb-4">Categorias</h3>
-<ul class="space-y-2">
-<li><a href="#" class="text-green-300 hover:text-white transition">Hortaliças Orgânicas</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Produtos Recicláveis</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Cosméticos Naturais</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Bambu e Vidro</a></li>
-<li><a href="#" class="text-green-300 hover:text-white transition">Promoções</a></li>
-</ul>
-</div>
-
-<div>
-<h3 class="font-bold text-lg mb-4">Pagamento</h3>
-<div class="grid grid-cols-3 gap-2 mb-4">
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=Visa" alt="Logo Visa - método de pagamento" class="h-6">
-</div>
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=MC" alt="Logo Mastercard - método de pagamento" class="h-6">
-</div>
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=PIX" alt="Logo PIX - método de pagamento brasileiro" class="h-6">
-</div>
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=Boleto" alt="Logo Boleto Bancário - método de pagamento" class="h-6">
-</div>
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=PayPal" alt="Logo PayPal - método de pagamento online" class="h-6">
-</div>
-<div class="bg-white p-2 rounded flex items-center justify-center">
-<img src="https://placehold.co/40x25/ffffff/2e7d32?text=Amex" alt="Logo American Express - método de pagamento" class="h-6">
-</div>
-</div>
-<div class="flex space-x-4">
-<a href="#"><i class="fab fa-facebook-f text-green-300 hover:text-white transition"></i></a>
-<a href="#"><i class="fab fa-instagram text-green-300 hover:text-white transition"></i></a>
-<a href="#"><i class="fab fa-pinterest text-green-300 hover:text-white transition"></i></a>
-<a href="#"><i class="fab fa-youtube text-green-300 hover:text-white transition"></i></a>
-</div>
-</div>
-</div>
-
-<div class="border-t border-green-800 mt-8 pt-8 text-center text-sm text-green-400">
-<p>&copy; 2023 EcoVerde - Produtos Sustentáveis. Todos os direitos reservados.</p>
-<p class="mt-2">CNPJ: 12.345.678/0001-90 - Rua das Flores, 123 - Araucária/PR</p>
-</div>
-</div>
-</footer>
-
-<script>
-// Carrinho de compras simples
-const cartButtons = document.querySelectorAll('[class*="fa-cart-plus"]');
-let cartCount = 0;
-const cartBadge = document.querySelector('.fa-shopping-cart').nextElementSibling;
-
-cartButtons.forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-cartCount++;
-cartBadge.textContent = cartCount;
-
-// Efeito visual
-const cartIcon = this;
-cartIcon.classList.add('animate-bounce');
-setTimeout(() => {
-cartIcon.classList.remove('animate-bounce');
-}, 1000);
-});
-});
-
-// Menu mobile (simplificado)
-const mobileMenuButton = document.querySelector('.fa-bars').parentElement;
-const mobileMenu = document.querySelector('.md\\:hidden');
-
-mobileMenuButton.addEventListener('click', function() {
-// Implementação simplificada - em um caso real, seria mais complexo
-alert('Menu mobile seria aberto aqui em uma implementação completa');
-});
-</script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+>
