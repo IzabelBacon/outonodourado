@@ -1,29 +1,42 @@
-// Carrinho de compras simples
-const cartButtons = document.querySelectorAll('[class*="fa-cart-plus"]');
-let cartCount = 0;
-const cartBadge = document.querySelector('.fa-shopping-cart').nextElementSibling;
+        const label = document.createElement('label');
+        label.textContent = itemInfo.label;
+        itemDiv.appendChild(label);
 
-cartButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        cartCount++;
-        cartBadge.textContent = cartCount;
+        // Tooltip opcional (se quiser mostrar descrição ao passar o mouse)
+        itemDiv.title = itemInfo.description;
 
-        // Efeito visual
-        const cartIcon = this;
-        cartIcon.classList.add('animate-bounce');
-        setTimeout(() => {
-            cartIcon.classList.remove('animate-bounce');
-        }, 1000);
+        inventoryBar.appendChild(itemDiv);
+    // Event listeners
+    puzzleSubmit.addEventListener('click', submitPuzzle);
+    puzzleClose.addEventListener('click', closePuzzle);
+
+    helpBtn.addEventListener('click', () => {
+      showInfo("Controls: Click hotspots to explore. H = Help, I = Inventory toggle, R = Restart.");
     });
-});
 
-// Menu mobile (simplificado)
-const mobileMenuButton = document.querySelector('.fa-bars').parentElement;
-const mobileMenu = document.querySelector('.md\\:hidden');
+    inventoryBtn.addEventListener('click', () => {
+      inventoryVisible = !inventoryVisible;
+      inventoryBar.classList.toggle('hidden', !inventoryVisible);
+    });
 
-mobileMenuButton.addEventListener('click', function() {
-    // Implementação simplificada - em um caso real, seria mais complexo
-    alert('Menu mobile seria aberto aqui em uma implementação completa');
-});
+    restartBtn.addEventListener('click', () => {
+      currentSceneId = 'shore';
+      inventory = [];
+      Object.values(puzzles).forEach(p => p.solved = false);
+      renderScene(currentSceneId);
+      showInfo("Game restarted.");
+    });
 
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'h') {
+        helpBtn.click();
+      } else if (e.key.toLowerCase() === 'i') {
+        inventoryBtn.click();
+      } else if (e.key.toLowerCase() === 'r') {
+        restartBtn.click();
+      }
+    });
+
+    // Inicialização
+    renderScene(currentSceneId);
